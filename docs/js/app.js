@@ -17,8 +17,13 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/3926
 
     for (let [key, value] of Object.entries(weatherValues)){
       console.log(`${key}: ${value}`)
-      var p = document.getElementById("p1")
-      p.insertAdjacentHTML("afterend",  `<p>${key}: ${value}</p>`)
+      var para = document.createElement("p");
+      var node = document.createTextNode(`${key}: ${value}`);
+      para.appendChild(node);
+      var element = document.getElementById("div1");
+      element.appendChild(para);      
+      // var p = document.getElementById("p1")
+      // p.insertAdjacentText("afterend",  `${key}: ${value}`)
     }
 
   }) .catch ((err) => {

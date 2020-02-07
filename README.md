@@ -1,18 +1,16 @@
 # Web App From Scratch @cmda-minor-web 1819
 
-## linkToLiveDemo? review (assignment): assignGrade (1);
+## What does your app do, what is the goal?
 
-## What does your app do, what is the goal? (passing butter)
+## Which actors are there in your application?
 
-## Which actors are there in your application? (actor diagram)
+## Which API is used and what are the limitations?
 
-## Which API is used and what are the limitations? (rate limit)
-
-## How does flowed interaction through the application? (interaction diagram)
+## How does flowed interaction through the application?
 
 ## Which design patterns and best practices
 
-## What would you like to add (feature wishlist / backlog)
+## What would you like to add
 
 
 <!-- Add a link to your live demo in Github Pages 🌐-->

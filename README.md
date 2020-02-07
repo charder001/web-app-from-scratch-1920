@@ -1,12 +1,14 @@
 # Web App From Scratch @cmda-minor-web 1819
 
 ## What does your app do, what is the goal?
+I'm creating a weather app
 
 ## Which actors are there in your application?
 
 ## Which API is used and what are the limitations?
+For this app i will be using the Dark Sky API. I chose the dark sky API because it was recommended by our teachers. It is really easy to work with and has decent documentation. The API allows 1,000 free calls each day.
 
-## How does flowed interaction through the application?
+## How does the interaction flow through the application?
 
 ## Which design patterns and best practices
 

@@ -39,11 +39,13 @@ fetch(url)
   }) 
 
   
-  //url builder giphy
-  const gifendpoint = "http://api.giphy.com/v1/gifs/search?q=";
-  let gifsearch = "rain";
-  let gifkey = "&api_key=PjKmqmgJFf8rU0K7z9Z7t7hTeNUZBnbk&limit=5";
-  const gifurl = gifendpoint + gifsearch + gifkey;
+//url builder giphy
+
+const gifendpoint = "https://api.giphy.com/v1/gifs/random?";
+let gifkey = "api_key=PjKmqmgJFf8rU0K7z9Z7t7hTeNUZBnbk";
+let giftag = "&tag=rainy weather"
+const gifurl = gifendpoint + gifkey + giftag;
+
 fetch(gifurl)
 .then((response) => {
   if (response.ok)  {
@@ -58,7 +60,7 @@ fetch(gifurl)
 .then((gifjson) => {
   console.log(gifjson)
   var gifs = { 
-    gifurl: gifjson.data[1].images.original.url
+    gifurl: gifjson.data.image_url
   }
   console.log(gifs.gifurl)
   var gifdisplay = document.getElementById("div2")

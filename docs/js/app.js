@@ -1,4 +1,10 @@
-fetch(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/39269c07a47ba71c7c9af7ee9e8415fd/37.8267,-122.4233?units=si`)
+const cors = "https://cors-anywhere.herokuapp.com/";
+const endpoint = "https://api.darksky.net/forecast/";
+const key = "39269c07a47ba71c7c9af7ee9e8415fd/";
+const coordinates = "37.8267,-122.4233";
+const celcius = "?units=si";
+const url = cors + endpoint + key + coordinates + celcius;
+fetch(url)
   .then((response) => {
     if (response.ok)  {
     return response.json();

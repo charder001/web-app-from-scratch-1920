@@ -71,3 +71,7 @@ fetch(gifurl)
 .catch ((err) => {
     console.log("An error occured - ", err)
   })
+
+  routie("text", function(){
+    console.log("you clicked")
+  })

@@ -1,18 +1,24 @@
 # Web App From Scratch @cmda-minor-web 1819
 
-## linkToLiveDemo? review (assignment): assignGrade (1);
+## What does your app do, what is the goal?
+This will be a weather app where people can add locations to their dashboard and see the forecast for those locations.
+The application will also feature a detail page for each specific location with a more in-depth forecast.
 
-## What does your app do, what is the goal? (passing butter)
+## Which actors are there in your application?
+The API will be used to fetch data to inject into the HTML
+My app will turn the returned JSON into HTML elements and content
+The HTML on the page will be used to gather inputs which can be used to make API calls.
 
-## Which actors are there in your application? (actor diagram)
+## Which API is used and what are the limitations?
+For this app i will be using the Dark Sky API. I chose the dark sky API because it was recommended by our teachers. It is really easy to work with and has decent documentation. The API allows 1,000 free calls each day.
 
-## Which API is used and what are the limitations? (rate limit)
-
-## How does flowed interaction through the application? (interaction diagram)
+## How does the interaction flow through the application?
 
 ## Which design patterns and best practices
 
-## What would you like to add (feature wishlist / backlog)
+## What would you like to add
+Detail page
+Functionality to add more locations
 
 
 <!-- Add a link to your live demo in Github Pages 🌐-->

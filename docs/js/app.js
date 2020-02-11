@@ -43,7 +43,7 @@ fetch(url)
 
 const gifendpoint = "https://api.giphy.com/v1/gifs/random?";
 let gifkey = "api_key=PjKmqmgJFf8rU0K7z9Z7t7hTeNUZBnbk";
-let giftag = "&tag=rainy weather"
+let giftag = "&tag=sun"
 const gifurl = gifendpoint + gifkey + giftag;
 
 fetch(gifurl)
@@ -65,6 +65,8 @@ fetch(gifurl)
   console.log(gifs.gifurl)
   var gifdisplay = document.getElementById("div2")
   gifdisplay.insertAdjacentHTML("afterend", `<img src="${gifs.gifurl}">`)
+  var gifdisplay = document.getElementById("div3")
+  gifdisplay.insertAdjacentHTML("afterend", `<img src="${gifs.gifurl}">`)
 })
 
 //Basic error handling for debugging purpouses
@@ -72,6 +74,22 @@ fetch(gifurl)
     console.log("An error occured - ", err)
   })
 
-  routie("text", function(){
-    console.log("you clicked")
+
+const sections = document.querySelectorAll("section");
+
+//routing using the routie micro library
+routie({
+  network: () => {
+    updateUI("detail");
+  }
+})
+
+
+updateUI((route) => {
+  sections.forEach(section => {
+    section.classList.remove("active")
   })
+  activeSection = document.querySelector(`[data-route=$(route)]`);
+  console.log(activeSection);
+  activeSection.classList.add("active");
+})

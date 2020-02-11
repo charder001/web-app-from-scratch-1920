@@ -89,3 +89,12 @@ a:visited {
 footer {
   font-style: italic;
 }
+
+section {
+  opacity: 0;
+}
+
+section.active {
+  opacity: 1;
+}
+

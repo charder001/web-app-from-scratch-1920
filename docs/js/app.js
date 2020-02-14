@@ -1,13 +1,4 @@
-
-//url builder darksky
-// const cors = "https://cors-anywhere.herokuapp.com/";
-// const endpoint = "https://api.darksky.net/forecast/";
-// const key = "39269c07a47ba71c7c9af7ee9e8415fd/";
-// let coordinates = "37.8267,-122.4233";
-// const celcius = "?units=si";
-// const url = cors + endpoint + key + coordinates + celcius;
-
-function DSurlBuilder(){
+ DSurlBuilder = () => {
   const cors = "https://cors-anywhere.herokuapp.com/";
   const endpoint = "https://api.darksky.net/forecast/";
   const key = "39269c07a47ba71c7c9af7ee9e8415fd/";
@@ -49,19 +40,13 @@ fetch(DSurlBuilder())
 
   }) 
 
-  function GIurlBuilder(){
+   GIurlBuilder = () => {
     const gifendpoint = "https://api.giphy.com/v1/gifs/random?";
     let gifkey = "api_key=PjKmqmgJFf8rU0K7z9Z7t7hTeNUZBnbk";
     let giftag = "&tag=sun"
     const gifurl = gifendpoint + gifkey + giftag;
     return gifurl;
   }
-//url builder giphy
-
-// const gifendpoint = "https://api.giphy.com/v1/gifs/random?";
-// let gifkey = "api_key=PjKmqmgJFf8rU0K7z9Z7t7hTeNUZBnbk";
-// let giftag = "&tag=sun"
-// const gifurl = gifendpoint + gifkey + giftag;
 
 fetch(GIurlBuilder())
 .then((response) => {

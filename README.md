@@ -4,6 +4,7 @@
 ## What does your app do, what is the goal?
 This will be a weather app where people can add locations to their dashboard and see the forecast for those locations.
 The application will also feature a detail page for each specific location with a more in-depth forecast.
+The Giphy API will be used to add gifs based on the weather forecast.
 
 ## Which actors are there in your application?
 The API will be used to fetch data to inject into the HTML

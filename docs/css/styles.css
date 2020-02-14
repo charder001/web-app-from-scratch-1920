@@ -91,10 +91,10 @@ footer {
 }
 
 section {
-  opacity: 0;
+  display:none;
 }
 
 section.active {
-  opacity: 1;
+ display: block;
 }
 

@@ -78,18 +78,40 @@ fetch(gifurl)
 const sections = document.querySelectorAll("section");
 
 //routing using the routie micro library
+// routie({
+//   network: () => {
+//     updateUI("detail");
+//   }
+// })
+
 routie({
-  network: () => {
-    updateUI("detail");
+  //#giphy/425367
+  'giphy/:id': id => {
+    console.log(id);
+  },
+  detail: () => {
+    updateUI('detail');
+  },
+  home: () => {
+    updateUI('home');
   }
-})
+});
 
 
-updateUI((route) => {
+// updateUI((route) => {
+//   sections.forEach(section => {
+//     section.classList.remove("active")
+//   });
+//   activeSection = document.querySelector(`[data-route=$(route)]`);
+//   console.log(activeSection);
+//   activeSection.classList.add("active");
+// })
+
+function updateUI(route) {
   sections.forEach(section => {
-    section.classList.remove("active")
-  })
-  activeSection = document.querySelector(`[data-route=$(route)]`);
+    section.classList.remove('active');
+  });
+  activeSection = document.querySelector(`[data-route=${route}]`);
   console.log(activeSection);
-  activeSection.classList.add("active");
-})
+  activeSection.classList.add('active');
+}

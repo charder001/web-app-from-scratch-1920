@@ -1,13 +1,24 @@
+
 //url builder darksky
-const cors = "https://cors-anywhere.herokuapp.com/";
-const endpoint = "https://api.darksky.net/forecast/";
-const key = "39269c07a47ba71c7c9af7ee9e8415fd/";
-let coordinates = "37.8267,-122.4233";
-const celcius = "?units=si";
-const url = cors + endpoint + key + coordinates + celcius;
+// const cors = "https://cors-anywhere.herokuapp.com/";
+// const endpoint = "https://api.darksky.net/forecast/";
+// const key = "39269c07a47ba71c7c9af7ee9e8415fd/";
+// let coordinates = "37.8267,-122.4233";
+// const celcius = "?units=si";
+// const url = cors + endpoint + key + coordinates + celcius;
+
+function DSurlBuilder(){
+  const cors = "https://cors-anywhere.herokuapp.com/";
+  const endpoint = "https://api.darksky.net/forecast/";
+  const key = "39269c07a47ba71c7c9af7ee9e8415fd/";
+  let coordinates = "37.8267,-122.4233";
+  const celcius = "?units=si";
+  const url = cors + endpoint + key + coordinates + celcius;
+  return url;
+}
 
 //fetching data from API
-fetch(url)
+fetch(DSurlBuilder())
   .then((response) => {
     if (response.ok)  {
     return response.json();
@@ -38,15 +49,21 @@ fetch(url)
 
   }) 
 
-  
+  function GIurlBuilder(){
+    const gifendpoint = "https://api.giphy.com/v1/gifs/random?";
+    let gifkey = "api_key=PjKmqmgJFf8rU0K7z9Z7t7hTeNUZBnbk";
+    let giftag = "&tag=sun"
+    const gifurl = gifendpoint + gifkey + giftag;
+    return gifurl;
+  }
 //url builder giphy
 
-const gifendpoint = "https://api.giphy.com/v1/gifs/random?";
-let gifkey = "api_key=PjKmqmgJFf8rU0K7z9Z7t7hTeNUZBnbk";
-let giftag = "&tag=sun"
-const gifurl = gifendpoint + gifkey + giftag;
+// const gifendpoint = "https://api.giphy.com/v1/gifs/random?";
+// let gifkey = "api_key=PjKmqmgJFf8rU0K7z9Z7t7hTeNUZBnbk";
+// let giftag = "&tag=sun"
+// const gifurl = gifendpoint + gifkey + giftag;
 
-fetch(gifurl)
+fetch(GIurlBuilder())
 .then((response) => {
   if (response.ok)  {
   return response.json();
@@ -77,18 +94,7 @@ fetch(gifurl)
 
 const sections = document.querySelectorAll("section");
 
-//routing using the routie micro library
-// routie({
-//   network: () => {
-//     updateUI("detail");
-//   }
-// })
-
 routie({
-  //#giphy/425367
-  'giphy/:id': id => {
-    console.log(id);
-  },
   detail: () => {
     updateUI('detail');
   },
@@ -98,20 +104,10 @@ routie({
 });
 
 
-// updateUI((route) => {
-//   sections.forEach(section => {
-//     section.classList.remove("active")
-//   });
-//   activeSection = document.querySelector(`[data-route=$(route)]`);
-//   console.log(activeSection);
-//   activeSection.classList.add("active");
-// })
-
 function updateUI(route) {
   sections.forEach(section => {
     section.classList.remove('active');
   });
   activeSection = document.querySelector(`[data-route=${route}]`);
-  console.log(activeSection);
   activeSection.classList.add('active');
 }

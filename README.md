@@ -1,4 +1,5 @@
 # Web App From Scratch @cmda-minor-web 1819
+![wafs](https://user-images.githubusercontent.com/43436118/74514472-eb0e3480-4f0c-11ea-8be4-6a0b9ca04461.PNG)
 
 ## What does your app do, what is the goal?
 This will be a weather app where people can add locations to their dashboard and see the forecast for those locations.

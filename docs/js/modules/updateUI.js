@@ -1,6 +1,4 @@
-export function nice(){
-
-
+export function router(){
 routie({
   "detail": () => {
     updateUI('detail');
@@ -19,7 +17,4 @@ function updateUI(route) {
       section.classList.remove('active');
     });
     document.querySelector(`[data-route=${route}]`).classList.add('active')
-
-//    activeSection = document.querySelector(`[data-route=${route}]`);
-//     activeSection.classList.add('active');
   }

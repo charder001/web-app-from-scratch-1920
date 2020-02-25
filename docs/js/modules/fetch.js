@@ -15,9 +15,11 @@ fetch(DSurlBuilder())
 
    //Create an object using data from our API call
    .then((myJson) => {
+    const data = JSON.parse(myJson)
+    console.log(data)
      console.log(myJson);
      const weatherValues = {
-       temperature: myJson.currently.temperature,
+       Temperature: myJson.currently.temperature,
        precipIntensity: myJson.currently.precipIntensity,
        precipProbability: myJson.currently.precipProbability
      }
@@ -30,7 +32,11 @@ fetch(DSurlBuilder())
        let element = document.getElementById("div1");
        element.appendChild(para);
      }
-
+     
+    //  var dailyForecast = myJson.map(function (forecast){
+    //     return myJson.currently.temperature
+    //  });
+    //  console.log(dailyforecast)
    })
 }
 

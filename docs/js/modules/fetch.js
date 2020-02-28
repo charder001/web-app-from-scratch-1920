@@ -15,13 +15,12 @@ fetch(DSurlBuilder())
 
    //Create an object using data from our API call
    .then((myJson) => {
-    const data = JSON.parse(myJson)
-    console.log(data)
+
      console.log(myJson);
      const weatherValues = {
-       Temperature: myJson.currently.temperature,
-       precipIntensity: myJson.currently.precipIntensity,
-       precipProbability: myJson.currently.precipProbability
+       Celsius: myJson.currently.temperature,
+       RainIntensity: myJson.currently.precipIntensity,
+       RainProbability: myJson.currently.precipProbability
      }
      //Loop for each key-value pair in our object and insert these into our HTML
      for (let [key, value] of Object.entries(weatherValues)) {

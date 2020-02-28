@@ -10,8 +10,7 @@ router()
 //transparency templating engine
 const footer = document.querySelector('footer');
 const data = {
-  title: 'Developer Tools',
-  text: '... are totally wicked 🦄'
+  text: 'Trademark @charder001 on github'
 };
 
 setTimeout(renderTemplate(footer, data), 1000);

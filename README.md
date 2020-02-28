@@ -36,3 +36,11 @@ Routing is something i had never done before, and wnile at first i could not rea
 
 - ### Modular coding
 During my tech course last year, the code i worked in was modular, but it was written by a team member. I knew how to work with modular code, but had never written or made some myself. I love how much easier it is to debug and when working in a team project, avoids conflcts.
+
+## What would i like to add?
+= more interesting detail page with more gifs for the user to see
+- algorithm that actually changes gif request depending on weather
+- make entire page template
+- add loading state
+- map filter reduce
+

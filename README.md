@@ -10,6 +10,10 @@ The API will be used to fetch data to inject into the HTML
 My app will turn the returned JSON into HTML elements and content
 The HTML on the page will be used to gather inputs which can be used to make API calls.
 
+# Actor diagram
+![actor diagram2](https://user-images.githubusercontent.com/43436118/75547598-88985680-5a2b-11ea-97a5-8a0063acee79.png)
+
+
 # interaction diagram
 ![interaction diagram2](https://user-images.githubusercontent.com/43436118/75524196-b7073900-5a0d-11ea-8b0f-b720e60e5051.png)
 

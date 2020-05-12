@@ -2,8 +2,6 @@ import {
   fetchWeather
 } from "./fetch.js";
 
-
-
 var location
 
 export function router() {
@@ -21,7 +19,6 @@ export function router() {
       updateUI('home');
     }
   });
-
 }
 
 //update sections by removing all of the active classes and adding it to one

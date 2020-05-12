@@ -22,12 +22,28 @@ export function fetchWeather(location) {
     .then((myJson) => {
 
       console.log(myJson);
+      var manySunny = myJson.hourly.data.filter(function(thenSunny){
+        return thenSunny.summary == "Clear"
+      })
+      console.log("De komende 48 uur is het " + manySunny.length + " uur zonnig")
+
+      var allTemp = myJson.hourly.data.map(function (thenTemp) {
+        return thenTemp.temperature
+      });
+      var totalTemp = allTemp.reduce(function(accumalator, temp){
+        return accumalator + temp
+      })
+      var averageTemp = totalTemp / 48
+      console.log("The average temp next 24h is: " + averageTemp)
       const weatherValues = {
         "Graden (c)": myJson.currently.temperature,
         "Regen intensiteit(mm/uur)": myJson.currently.precipIntensity,
         "Kans op regen (%)": myJson.currently.precipProbability,
-        "Opsomming": myJson.currently.summary
+        "Opsomming": myJson.currently.summary,
+        "Gemiddelde temperatuur(48h): ": averageTemp,
+        "Uren zon de komende 48 uur: ": manySunny.length
       }
+      
       //Loop for each key-value pair in our object and insert these into our HTML
       for (let [key, value] of Object.entries(weatherValues)) {
         console.log(`${key}: ${value}`)

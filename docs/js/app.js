@@ -1,12 +1,8 @@
 import {
-  fetchGif
-} from "./modules/fetch.js";
-import {
   router
 } from "./modules/updateUI.js";
 
 
-fetchGif()
 router()
 
 //transparency templating engine

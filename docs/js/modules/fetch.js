@@ -1,9 +1,6 @@
 import {
   DSurlBuilder
 } from "./urlbuilder.js";
-import {
-  GIurlBuilder
-} from "./urlbuilder.js";
 
 
 export function fetchWeather(location) {
@@ -53,29 +50,3 @@ export function fetchWeather(location) {
     })
 }
 
-export function fetchGif() {
-  fetch(GIurlBuilder())
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-      //if the response isn't OK (200), reject the response
-      else {
-        return Promise.reject(response)
-      }
-    })
-
-    .then((gifJson) => {
-      console.log(gifJson)
-      console.log(gifJson.data[0].slug)
-      for (var i = 0; i < gifJson.data.length; i++) {
-        let gifdisplay = document.getElementById("div3")
-        gifdisplay.insertAdjacentHTML("afterend", `<img class="giphyImage" src="https://i.giphy.com/media/${gifJson.data[i].id}/giphy.webp">`)
-      }
-    })
-
-    //Basic error handling for debugging purpouses
-    .catch((err) => {
-      console.log("An error occured - ", err)
-    })
-}

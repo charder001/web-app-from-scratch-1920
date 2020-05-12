@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <h1>Giffing Weather</h1>
+    <h1>Rick's weer</h1>
   </header>
   <main>
     <section data-route="home" class="active">
@@ -22,15 +22,25 @@
     </section>
     <section data-route="amsterdam">
       <h2>Amsterdam</h2>
+      <p>Graden: <span data-bind="temp"></span></p>
+      <p>Kans op regen: <span data-bind="rainIntensity"></span></p>
+      <p>Kans op regen: <span data-bind="rainProbab"></span></p>
+      <p>Opsomming: <span data-bind="summary"></span></p>
+      <p>Gemiddelde temp: <span data-bind="average"></span></p>
+      <p>Zon uren in de komende 48 uur: <span data-bind="sunnyHours"></span></p>
+
       <a href="/index.html">home</a>
     </section>
     <section data-route="weesp">
       <h2>Weesp</h2>
+      <p>Graden: <span data-bind="temp"></span></p>
+      <p>Kans op regen: <span data-bind="rainIntensity"></span></p>
+      <p>Kans op regen: <span data-bind="rainProbab"></span></p>
+      <p>Opsomming: <span data-bind="summary"></span></p>
+      <p>Gemiddelde temp: <span data-bind="average"></span></p>
+      <p>Zon uren in de komende 48 uur: <span data-bind="sunnyHours"></span></p>
       <a href="/index.html">home</a>
     </section>
-    <footer>
-      <p data-bind="text">Trademark</p>
-    </footer>
   </main>
   <script src="js/routie.js"></script>
   <script type="module" src="js/app.js"></script>

@@ -3,6 +3,7 @@ import {
 } from "./urlbuilder.js";
 
 
+
 export function fetchWeather(location) {
   fetch(DSurlBuilder(location))
     .then((response) => {
@@ -14,10 +15,8 @@ export function fetchWeather(location) {
         return Promise.reject(response)
       }
     })
-
     //Create an object using data from our API call
     .then((myJson) => {
-
       console.log(myJson);
       var manySunny = myJson.hourly.data.filter(function(thenSunny){
         return thenSunny.summary == "Clear"
@@ -32,21 +31,26 @@ export function fetchWeather(location) {
       })
       var averageTemp = totalTemp / 48
       console.log("The average temp next 24h is: " + averageTemp)
-      const weatherValues = {
-        "Graden (c)": myJson.currently.temperature,
-        "Regen intensiteit(mm/uur)": myJson.currently.precipIntensity,
-        "Kans op regen (%)": myJson.currently.precipProbability,
-        "Opsomming": myJson.currently.summary,
-        "Gemiddelde temperatuur(48h): ": averageTemp,
-        "Uren zon de komende 48 uur: ": manySunny.length
+     var weatherValues = {
+        temp : myJson.currently.temperature,
+        rainIntensity: myJson.currently.precipIntensity,
+        rainProbab: myJson.currently.precipProbability,
+        summary: myJson.currently.summary,
+        average: averageTemp,
+        sunnyHours: manySunny.length
       }
       
-      //Loop for each key-value pair in our object and insert these into our HTML
-      for (let [key, value] of Object.entries(weatherValues)) {
-        console.log(`${key}: ${value}`)
-        var weatherDisplay = document.querySelector(".weatherDisplay")
-        weatherDisplay.insertAdjacentHTML("afterend", `<p>${key}: ${value}</p>`)
-      }
+      console.log(weatherValues)
+      Transparency.render(document.querySelector('.container'), weatherValues)
+    
     })
 }
 
+
+
+
+function renderTemplate(element, data) {
+  return () => {
+    Transparency.render(element, data);
+  };
+}

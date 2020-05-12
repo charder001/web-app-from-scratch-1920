@@ -2,6 +2,8 @@ import {
   fetchWeather
 } from "./fetch.js";
 
+
+
 var location
 
 export function router() {
@@ -24,15 +26,15 @@ export function router() {
 
 //update sections by removing all of the active classes and adding it to one
 function updateUI(route) {
+    if (route != 'home') {
+    fetchWeather(location)
+    }
+  
   const sections = document.querySelectorAll("section");
   sections.forEach(section => {
-    section.classList.remove('active');
+    section.classList.remove('active', "container");
   });
 
-  document.querySelector(`[data-route=${route}]`).classList.add('active')
-  if (route != 'home') {
-    console.log("nothome")
-    fetchWeather(location)
-    document.querySelector(`[data-route=${route}]`).classList.add("weatherDisplay")
-  }
+  document.querySelector(`[data-route=${route}]`).classList.add('active', "container")
+
 }

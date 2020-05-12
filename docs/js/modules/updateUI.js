@@ -1,20 +1,38 @@
-export function router(){
-routie({
-  "detail": () => {
-    updateUI('detail');
-  },
-  "home": () => {
-    updateUI('home');
-  }
-});
+import {
+  fetchWeather
+} from "./fetch.js";
+
+var location
+
+export function router() {
+  routie({
+    "amsterdam": () => {
+      location = "52.3702157, 4.8951679"
+      updateUI('amsterdam');
+    },
+    "weesp": () => {
+      location = "52.3080507, 5.0406217"
+      updateUI('weesp');
+
+    },
+    "home": () => {
+      updateUI('home');
+    }
+  });
 
 }
 
 //update sections by removing all of the active classes and adding it to one
 function updateUI(route) {
-    const sections = document.querySelectorAll("section");
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
-    document.querySelector(`[data-route=${route}]`).classList.add('active')
+  const sections = document.querySelectorAll("section");
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
+
+  document.querySelector(`[data-route=${route}]`).classList.add('active')
+  if (route != 'home') {
+    console.log("nothome")
+    fetchWeather(location)
+    document.querySelector(`[data-route=${route}]`).classList.add("weatherDisplay")
   }
+}

@@ -62,6 +62,10 @@ img {
   max-width: 25vh;
 }
 
+a {
+  display: block;
+}
+
 a,
 a:visited {
   color: var(--course);
@@ -79,3 +83,7 @@ section.active {
  display: block;
 }
 
+.giphyImage{
+  width: 100px;
+  height: 100px;
+}

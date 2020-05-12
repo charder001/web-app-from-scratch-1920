@@ -1,9 +1,11 @@
-import { fetchWeather } from "./modules/fetch.js";
-import { fetchGif } from "./modules/fetch.js";
-import { router } from "./modules/updateUI.js";
+import {
+  fetchGif
+} from "./modules/fetch.js";
+import {
+  router
+} from "./modules/updateUI.js";
 
 
-fetchWeather()
 fetchGif()
 router()
 
@@ -21,4 +23,3 @@ function renderTemplate(element, data) {
     Transparency.render(element, data);
   };
 }
-

@@ -1,14 +1,15 @@
 # Web App From Scratch @cmda-minor-web 1819
-![image](https://user-images.githubusercontent.com/43436118/75522841-321b2000-5a0b-11ea-9b9b-5f601dd922af.png)
-
+![weerapp](https://user-images.githubusercontent.com/43436118/81806807-473d2080-951d-11ea-99f5-16675dbe9594.PNG)
 
 ## What does your app do, what is the goal?
-This app provides the user with a weather forecast and a gif based on said forecast.
+This app provides the user with a weather forecast.
 
 ## Which actors are there in your application?
-The API will be used to fetch data to inject into the HTML
-My app will turn the returned JSON into HTML elements and content
-The HTML on the page will be used to gather inputs which can be used to make API calls.
+* A URL builder will create the required URL for fetch requests
+* The API will be used to fetch data to inject into the HTML
+* Application will modify/reduce the JSON for my use case
+* A router will handle navigation
+* A template engine will be used to render JSON to HTML
 
 # Actor diagram
 ![actor diagram2](https://user-images.githubusercontent.com/43436118/75547598-88985680-5a2b-11ea-97a5-8a0063acee79.png)
@@ -21,13 +22,10 @@ The HTML on the page will be used to gather inputs which can be used to make API
 ## Which API is used and what are the limitations?
 For this app i will be using the Dark Sky API. I chose the dark sky API because it was recommended by our teachers. It is really easy to work with and has decent documentation. The API allows 1,000 free calls each day.
 
-I will also use the GIPHY API to fetch all of the imagery needed for this app.
-
 ## API requests
-This app fetches the following data from the dark-sky and giphy API
+This app requires the following data from the dark-sky API
 
-- Weather temperature, precipitation chance and intensity.
-- Gifs based on a search query
+- Weather temperature, precipitation chance, intensity and the 48 hourly forecast.
 
 ## What have i learned?
 - ### Working with API's
@@ -46,9 +44,5 @@ Routing is something i had never done before, and wnile at first i could not rea
 During my tech course last year, the code i worked in was modular, but it was written by a team member. I knew how to work with modular code, but had never written or made some myself. I love how much easier it is to debug and when working in a team project, avoids conflcts.
 
 ## What would i like to add?
-- more interesting detail page with more gifs for the user to see
-- algorithm that actually changes gif request depending on weather
-- make entire page template
-- add loading state
-- map filter reduce
+- More interaction
 

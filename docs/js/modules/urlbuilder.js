@@ -1,3 +1,4 @@
+//export the url for fetch
 export var DSurlBuilder = (location) => {
   const cors = "https://cors-anywhere.herokuapp.com/";
   const endpoint = "https://api.darksky.net/forecast/";

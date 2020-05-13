@@ -1,78 +1,60 @@
-:root {
-  --dark: #000;
-  --course: #00B0FC;
-  --light: #fff;
-}
 body {
-  background-color: var(--dark);
-  color: var(--light);
-  font-family: monospace;
-  font-size: 1.5em;
-  line-height: 1.5;
+  background-color: black;
+  color: white;
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 40%;
+  margin: 10em auto 0 auto;
+}
+
+header {
+  background-color: darkgrey;
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
   margin: 0;
 }
-main {
-  max-width: 860px;
-  margin: 10vh auto;
-  padding:0 2rem;
-}
-header {
-  background: var(--course);
-  color: var(--dark);
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-h1 {
-  font-size: 7vw;
-}
-h2 {
-  font-size: 2em;
-  margin-top: 1.5em;
-}
-ul {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
+
+header img {
+  width: 2em;
+  height: 2em;
+  margin: 0 1em 0 .5em;
   padding: 0;
-  margin: 0 -1rem;
 }
-ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem;
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-ul img {
-  border: 2px solid var(--light);
-  margin-top: 2em;
-  margin-bottom: 2em;
+
+li {
+  margin: .3em;
 }
-img {
-  max-width: 100%;
-}
-.button {
-  background: var(--light);
-  color: var(--dark);
+
+a{
+  text-decoration: none;
   padding: 1em;
+  background-color: orangered;
+  width: 5em;
+  display: inline-block;
 }
 
-.examples img {
-  max-width: 25vh;
+a:hover{
+  background-color: rgb(255, 88, 28);
 }
 
-a {
-  display: block;
-}
-
-a,
 a:visited {
-  color: var(--course);
-}
-
-footer {
-  font-style: italic;
+  color: white;
 }
 
 section {
@@ -92,7 +74,9 @@ section.active {
 }
 
 .lds-ring {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
   width: 80px;
   height: 80px;
 }

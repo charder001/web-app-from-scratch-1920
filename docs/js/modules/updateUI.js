@@ -4,6 +4,7 @@ import {
 
 var location
 
+//routie.js handling routing in the app
 export function router() {
   routie({
     "amsterdam": () => {
@@ -27,7 +28,7 @@ function updateUI(route) {
     fetchWeather(location)
     }
   
-  const sections = document.querySelectorAll("section");
+  var sections = document.querySelectorAll("section");
   sections.forEach(section => {
     section.classList.remove('active', "container");
   });

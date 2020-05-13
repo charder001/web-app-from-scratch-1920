@@ -7,11 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
-  <title>How giffing good is the weather today?</title>
+  <title>Rick's weer</title>
 </head>
 
 <body>
   <header>
+    <img src="img/cloud.png">
     <h1>Rick's weer</h1>
   </header>
   <main>
@@ -23,23 +24,24 @@
     </section>
     <section data-route="amsterdam">
       <h2>Amsterdam</h2>
-      <p>Graden: <span data-bind="temp"></span></p>
-      <p>Kans op regen: <span data-bind="rainIntensity"></span></p>
-      <p>Kans op regen: <span data-bind="rainProbab"></span></p>
-      <p>Opsomming: <span data-bind="summary"></span></p>
-      <p>Gemiddelde temp: <span data-bind="average"></span></p>
-      <p>Zon uren in de komende 48 uur: <span data-bind="sunnyHours"></span></p>
-
+      <ul>
+      <li>Graden: <span data-bind="temp">...</span></li>
+      <li>Kans op regen: <span data-bind="rainIntensity">...</span></li>
+      <li>Kans op regen: <span data-bind="rainProbab">...</span></li>
+      <li>Opsomming: <span data-bind="summary">...</span></li>
+      <li>Gemiddelde temp: <span data-bind="average">...</span></li>
+      <li>Zon uren in de komende 48 uur: <span data-bind="sunnyHours">...</span></li>
+      </ul>
       <a href="/index.html">home</a>
     </section>
     <section data-route="weesp">
       <h2>Weesp</h2>
-      <p>Graden: <span data-bind="temp"></span></p>
-      <p>Kans op regen: <span data-bind="rainIntensity"></span></p>
-      <p>Kans op regen: <span data-bind="rainProbab"></span></p>
-      <p>Opsomming: <span data-bind="summary"></span></p>
-      <p>Gemiddelde temp: <span data-bind="average"></span></p>
-      <p>Zon uren in de komende 48 uur: <span data-bind="sunnyHours"></span></p>
+      <p>Graden: <span data-bind="temp">...</span></p>
+      <p>Kans op regen: <span data-bind="rainIntensity">...</span></p>
+      <p>Kans op regen: <span data-bind="rainProbab">...</span></p>
+      <p>Opsomming: <span data-bind="summary">...</span></p>
+      <p>Gemiddelde temp: <span data-bind="average">...</span></p>
+      <p>Zon uren in de komende 48 uur: <span data-bind="sunnyHours">...</span></p>
       <a href="/index.html">home</a>
     </section>
   </main>

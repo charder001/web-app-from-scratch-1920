@@ -12,7 +12,7 @@ This app provides the user with a weather forecast.
 * A template engine will be used to render JSON to HTML
 
 # Actor diagram
-![actor diagram2](https://user-images.githubusercontent.com/43436118/75547598-88985680-5a2b-11ea-97a5-8a0063acee79.png)
+![Actor diagram](https://user-images.githubusercontent.com/43436118/81809914-5ffc0500-9522-11ea-87ae-f414d2edf91b.png)
 
 
 # interaction diagram

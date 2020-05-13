@@ -1,6 +1,6 @@
 import {
   fetchWeather
-} from "./fetch.js";
+} from "./data.js";
 
 var location
 

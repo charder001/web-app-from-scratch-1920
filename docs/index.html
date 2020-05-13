@@ -18,9 +18,9 @@
   <main>
     <div class="lds-ring loader invisible"><div></div><div></div><div></div><div></div></div>
     <section data-route="home" class="active">
-        <p id="p1">Selecteer stad</p>
-      <a href="#amsterdam">Amsterdam</a>
-      <a href="#weesp">Weesp</a>
+        <h2>Selecteer stad</h2>
+      <a href="#amsterdam">Amsterdam<p>52.3702157, 4.8951679</p></a>
+      <a href="#weesp">Weesp<p>52.3080507, 5.0406217</p></a>
     </section>
     <section data-route="amsterdam">
       <h2>Amsterdam</h2>
@@ -36,12 +36,14 @@
     </section>
     <section data-route="weesp">
       <h2>Weesp</h2>
-      <p>Graden: <span data-bind="temp">...</span></p>
-      <p>Kans op regen: <span data-bind="rainIntensity">...</span></p>
-      <p>Kans op regen: <span data-bind="rainProbab">...</span></p>
-      <p>Opsomming: <span data-bind="summary">...</span></p>
-      <p>Gemiddelde temp: <span data-bind="average">...</span></p>
-      <p>Zon uren in de komende 48 uur: <span data-bind="sunnyHours">...</span></p>
+      <ul>
+      <li>Graden: <span data-bind="temp">...</span></li>
+      <li>Kans op regen: <span data-bind="rainIntensity">...</span></li>
+      <li>Kans op regen: <span data-bind="rainProbab">...</span></li>
+      <li>Opsomming: <span data-bind="summary">...</span></li>
+      <li>Gemiddelde temp: <span data-bind="average">...</span></li>
+      <li>Zon uren in de komende 48 uur: <span data-bind="sunnyHours">...</span></li>
+      </ul>
       <a href="/">home</a>
     </section>
   </main>

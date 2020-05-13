@@ -45,4 +45,6 @@ During my tech course last year, the code i worked in was modular, but it was wr
 
 ## What would i like to add?
 - More interaction
+- Custom locations
+- Prettier UI
 

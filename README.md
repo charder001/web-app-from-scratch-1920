@@ -16,7 +16,7 @@ This app provides the user with a weather forecast.
 
 
 # interaction diagram
-![interaction diagram2](https://user-images.githubusercontent.com/43436118/75524196-b7073900-5a0d-11ea-8b0f-b720e60e5051.png)
+![Interaction diagram](https://user-images.githubusercontent.com/43436118/81810589-7eaecb80-9523-11ea-86d5-beeedf38eae9.png)
 
 
 ## Which API is used and what are the limitations?

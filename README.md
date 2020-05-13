@@ -25,7 +25,7 @@ This application is built on
 
 4. Change direction into the newly created file
 
-`cd real-time-web-1920`
+`cd web-apps-from-scratch-1920`
 
 5. Install dependencies
 

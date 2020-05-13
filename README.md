@@ -4,6 +4,38 @@
 ## What does your app do, what is the goal?
 This app provides the user with a weather forecast.
 
+## Tech
+This application is built on
+
+* HTML/CSS/vanillaJS
+* Modular code
+* DarkSkyAPI
+* Transparency template engine
+* Routie routing
+
+## Installation
+1. Open your terminal
+2. Change directory to where you want to clone this repository, to the desktop for example
+
+`cd desktop` 
+
+3. Clone this repository
+
+`git clone https://github.com/charder001/web-apps-from-scratch-1920`
+
+4. Change direction into the newly created file
+
+`cd web-apps-from-scratch-1920`
+
+5. Install dependencies
+
+`npm install`
+
+6. Run application
+
+`npm run`
+
+
 ## Which actors are there in your application?
 * A URL builder will create the required URL for fetch requests
 * The API will be used to fetch data to inject into the HTML
@@ -12,11 +44,11 @@ This app provides the user with a weather forecast.
 * A template engine will be used to render JSON to HTML
 
 # Actor diagram
-![actor diagram2](https://user-images.githubusercontent.com/43436118/75547598-88985680-5a2b-11ea-97a5-8a0063acee79.png)
+![Actor diagram](https://user-images.githubusercontent.com/43436118/81809914-5ffc0500-9522-11ea-87ae-f414d2edf91b.png)
 
 
 # interaction diagram
-![interaction diagram2](https://user-images.githubusercontent.com/43436118/75524196-b7073900-5a0d-11ea-8b0f-b720e60e5051.png)
+![Interaction diagram](https://user-images.githubusercontent.com/43436118/81810589-7eaecb80-9523-11ea-86d5-beeedf38eae9.png)
 
 
 ## Which API is used and what are the limitations?
@@ -45,4 +77,6 @@ During my tech course last year, the code i worked in was modular, but it was wr
 
 ## What would i like to add?
 - More interaction
+- Custom locations
+- Prettier UI
 

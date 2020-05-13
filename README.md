@@ -5,11 +5,11 @@
 This app provides the user with a weather forecast.
 
 ## Which actors are there in your application?
-A URL builder will create the required URL for fetch requests
-The API will be used to fetch data to inject into the HTML
-Application will modify/reduce the JSON for my use case
-A router will handle navigation
-A template engine will be used to render JSON to HTML
+* A URL builder will create the required URL for fetch requests
+* The API will be used to fetch data to inject into the HTML
+* Application will modify/reduce the JSON for my use case
+* A router will handle navigation
+* A template engine will be used to render JSON to HTML
 
 # Actor diagram
 ![actor diagram2](https://user-images.githubusercontent.com/43436118/75547598-88985680-5a2b-11ea-97a5-8a0063acee79.png)

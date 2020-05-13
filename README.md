@@ -4,6 +4,38 @@
 ## What does your app do, what is the goal?
 This app provides the user with a weather forecast.
 
+## Tech
+This application is built on
+
+* HTML/CSS/vanillaJS
+* Modular code
+* DarkSkyAPI
+* Transparency template engine
+* Routie routing
+
+## Installation
+1. Open your terminal
+2. Change directory to where you want to clone this repository, to the desktop for example
+
+`cd desktop` 
+
+3. Clone this repository
+
+`git clone https://github.com/charder001/web-apps-from-scratch-1920`
+
+4. Change direction into the newly created file
+
+`cd real-time-web-1920`
+
+5. Install dependencies
+
+`npm install`
+
+6. Run application
+
+`npm run`
+
+
 ## Which actors are there in your application?
 * A URL builder will create the required URL for fetch requests
 * The API will be used to fetch data to inject into the HTML
